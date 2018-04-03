@@ -19,14 +19,8 @@ EOF
 
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=$prefix -DCMAKE_TOOLCHAIN_FILE=/opt/$target/$target.toolchain -DBUILD_TESTS=Off -DBUILD_BENCHMARKS=Off ..
+cmake -DCMAKE_INSTALL_PREFIX=$prefix -DCMAKE_TOOLCHAIN_FILE=/opt/$target/$target.toolchain -DBUILD_TESTS=Off -DBUILD_BENCHMARKS=Off -DDEACTIVATE_SNAPPY=On ..
 make && make install
-if [ $target == "x86_64-w64-mingw32" -o $target == "i686-w64-mingw32" ]; then
-    mkdir -p $prefix/bin
-    cp $prefix/lib/*.dll $prefix/bin
-else
-    cd $prefix/lib; for f in $(find . -name '*.so'); do strip $f ; done
-fi
 """
 
 # These are the platforms we will build for by default, unless further
