@@ -1,6 +1,6 @@
 using BinaryBuilder
 
-# Collection of sources required to build MbedTLS
+# Collection of sources required to build Blosc
 sources = [
     "https://github.com/Blosc/c-blosc.git" =>
     "917e0a5906da0a70423f2307cd2685e8683bc1ff", # v1.14.2
