@@ -6,4 +6,4 @@ This repository builds compiled binary libraries of [c-blosc](https://github.com
 [this repository's GitHub releases page](https://github.com/stevengj/BloscBuilder/releases) whenever a tag is created
 on this repository.
 
-This repository was created using [BinaryBuilder.jl](https://github.com/JuliaPackaging/BinaryBuilder.jl).
+This repository uses [BinaryBuilder.jl](https://github.com/JuliaPackaging/BinaryBuilder.jl).
