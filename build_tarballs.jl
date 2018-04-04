@@ -47,3 +47,10 @@ dependencies = [
 
 # Build the tarballs, and possibly a `build.jl` as well.
 build_tarballs(ARGS, "ZMQ", sources, script, platforms, products, dependencies)
+
+println("Contents of ", pwd(), " = ", readdir("."))
+if isdir("products")
+    println("PRODUCTS = ", readdir("products"))
+else
+    println("products/ directory not found")
+end
