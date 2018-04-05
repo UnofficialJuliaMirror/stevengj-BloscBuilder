@@ -19,7 +19,7 @@ EOF
 
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=$prefix -DCMAKE_TOOLCHAIN_FILE=/opt/$target/$target.toolchain -DBUILD_TESTS=Off -DBUILD_BENCHMARKS=Off -DDEACTIVATE_SNAPPY=On ..
+cmake -DCMAKE_INSTALL_PREFIX=$prefix -DCMAKE_TOOLCHAIN_FILE=/opt/$target/$target.toolchain -DBUILD_TESTS=Off -DBUILD_BENCHMARKS=Off ..
 make && make install
 
 if [ $target == "x86_64-w64-mingw32" -o $target == "i686-w64-mingw32" ]; then
