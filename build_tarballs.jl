@@ -23,7 +23,7 @@ cmake -DCMAKE_INSTALL_PREFIX=$prefix -DCMAKE_TOOLCHAIN_FILE=/opt/$target/$target
 make && make install
 
 if [ $target == "x86_64-w64-mingw32" -o $target == "i686-w64-mingw32" ]; then
-    mkdir -p $prefix/lib
+    mkdir -p $prefix/bin
     mv $prefix/lib/*.dll $prefix/bin
 fi
 """
