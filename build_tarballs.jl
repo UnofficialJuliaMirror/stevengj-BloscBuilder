@@ -3,7 +3,7 @@ using BinaryBuilder
 # Collection of sources required to build Blosc
 sources = [
     "https://github.com/Blosc/c-blosc.git" =>
-    "917e0a5906da0a70423f2307cd2685e8683bc1ff", # v1.14.2
+    "88864b5fb759d12a0b32c47ad9f0436d00adea88", # v1.14.3
 ]
 
 # Bash recipe for building across all platforms
