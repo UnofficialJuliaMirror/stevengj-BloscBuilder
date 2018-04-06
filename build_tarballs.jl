@@ -10,13 +10,6 @@ sources = [
 script = raw"""
 cd $WORKSPACE/srcdir/c-blosc
 
-patch blosc/blosc.c <<EOF
-59c59
-< #if defined(_WIN32) && !defined(__GNUC__)
----
-> #if defined(_WIN32)
-EOF
-
 mkdir build
 cd build
 cmake -DCMAKE_INSTALL_PREFIX=$prefix -DCMAKE_TOOLCHAIN_FILE=/opt/$target/$target.toolchain -DBUILD_TESTS=Off -DBUILD_BENCHMARKS=Off ..
