@@ -12,7 +12,7 @@ cd $WORKSPACE/srcdir/c-blosc
 
 mkdir build
 cd build
-cmake -DCMAKE_INSTALL_PREFIX=$prefix -DCMAKE_TOOLCHAIN_FILE=/opt/$target/$target.toolchain -DBUILD_TESTS=Off -DBUILD_BENCHMARKS=Off ..
+cmake -DCMAKE_INSTALL_PREFIX=$prefix -DCMAKE_TOOLCHAIN_FILE=/opt/$target/$target.toolchain -DBUILD_TESTS=Off -DBUILD_BENCHMARKS=Off -DCMAKE_SYSTEM_PROCESSOR=$(uname -p) ..
 make && make install
 """
 
