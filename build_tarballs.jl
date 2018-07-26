@@ -30,7 +30,7 @@ dependencies = [
 ]
 
 # Build the tarballs, and possibly a `build.jl` as well.
-build_tarballs(ARGS, "Blosc", sources, script, platforms, products, dependencies)
+build_tarballs(ARGS, "Blosc", v"1.14.3", sources, script, platforms, products, dependencies)
 
 println("Contents of ", pwd(), " = ", readdir("."))
 if isdir("products")
